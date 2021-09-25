@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: fastapi
+  labels:
+    app: fastapi
+spec:
+  containers:
+    - name: api
+      image: rafaelschweder/fastapi:alpine
+      ports:
+        - name: apiports
+          containerPort: 8080
+          protocol: TCP
